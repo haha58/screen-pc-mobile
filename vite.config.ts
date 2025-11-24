@@ -13,11 +13,13 @@ export default defineConfig({
 	plugins: [
 		vue(),
 		Components({
+			//AntDesignVueResolver 自动扫描src/components目录下的组件
 			resolvers: [AntDesignVueResolver()]
 		}),
 		viteCompression({
 			threshold: 10240 // // 如果体积大于阈值，将被压缩，单位为b，体积过小时请不要压缩，以免适得其反
 		}),
+		// 可视化分析插件：1、生成打包分析报告
 		visualizer()
 	],
 	server: {

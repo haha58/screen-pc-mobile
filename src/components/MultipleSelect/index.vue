@@ -9,6 +9,7 @@ import { defineComponent } from 'vue';
 export default defineComponent({
 	setup(_: SelectProps, ctx) {
 		return {
+			//包含属性：attrs：未在props中定义的属性，会被自动绑定到组件的根元素上
 			attrs: ctx.attrs
 		};
 	}

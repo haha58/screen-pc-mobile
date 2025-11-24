@@ -2,7 +2,9 @@
 	<div class="module-item">
 		<h2 v-if="title">{{ title }}</h2>
 		<a-spin wrapperClassName="spinning" :spinning="loading">
+			<!--组件的内容将会在这渲染-->
 			<slot />
+			<!--自定义加载指示器的插槽 indicator：vNode | slot-->
 			<template #indicator>
 				<div class="circle-3"></div>
 			</template>
